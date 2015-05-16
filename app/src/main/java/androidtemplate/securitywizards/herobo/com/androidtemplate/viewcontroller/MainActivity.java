@@ -1,17 +1,35 @@
-package androidtemplate.securitywizards.herobo.com.androidtemplate;
+package androidtemplate.securitywizards.herobo.com.androidtemplate.viewcontroller;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.ActionBar;
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.squareup.otto.Bus;
 
-public class MainActivity extends ActionBarActivity {
+import javax.inject.Inject;
+
+import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import androidtemplate.securitywizards.herobo.com.androidtemplate.other.helper.AndroidUtils;
+import androidtemplate.securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.CarouselFragment;
+
+
+public class MainActivity extends BaseActivity {
+
+    @Inject Bus bus;
+    @Inject AndroidUtils androidUtils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        androidUtils.loadFragment(this,R.id.container,new CarouselFragment());
+
     }
 
 
@@ -36,4 +54,6 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
