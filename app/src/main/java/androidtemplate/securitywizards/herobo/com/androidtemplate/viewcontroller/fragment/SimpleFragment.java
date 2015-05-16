@@ -12,9 +12,8 @@ import butterknife.Views;
 /**
  * Fragment which houses the View pager.
  */
-public class ProductFragment extends Fragment {
+public class SimpleFragment extends BaseFragment {
 
-    int type=0;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,15 +24,9 @@ public class ProductFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_simple, container, false);
     }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        Views.inject(this, getView());
-    }
-
 
     public static Fragment newInstance(){
-        ProductFragment productFragment=new ProductFragment();
-        return productFragment;
+        SimpleFragment simpleFragment =new SimpleFragment();
+        return simpleFragment;
     }
 }

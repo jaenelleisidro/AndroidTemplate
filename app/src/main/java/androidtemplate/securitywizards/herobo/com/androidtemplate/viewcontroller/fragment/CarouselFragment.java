@@ -10,13 +10,15 @@ import android.view.ViewGroup;
 import com.viewpagerindicator.TitlePageIndicator;
 
 import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import androidtemplate.securitywizards.herobo.com.androidtemplate.other.Injector;
+import androidtemplate.securitywizards.herobo.com.androidtemplate.viewcontroller.adapter.CarouselPagerAdapter;
 import butterknife.InjectView;
 import butterknife.Views;
 
 /**
  * Fragment which houses the View pager.
  */
-public class CarouselFragment extends Fragment {
+public class CarouselFragment extends BaseFragment {
 
     @InjectView(R.id.tpi_header)
     protected TitlePageIndicator indicator;
@@ -33,11 +35,9 @@ public class CarouselFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        Views.inject(this, getView());
-
-//        pager.setAdapter(new BootstrapPagerAdapter(getResources(), getChildFragmentManager()));
-//        indicator.setViewPager(pager);
-//        pager.setCurrentItem(0);
+        pager.setAdapter(new CarouselPagerAdapter(getResources(), getChildFragmentManager()));
+        indicator.setViewPager(pager);
+        pager.setCurrentItem(0);
 
     }
 }

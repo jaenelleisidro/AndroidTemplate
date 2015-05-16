@@ -1,12 +1,15 @@
 
 
-package androidtemplate.securitywizards.herobo.com.androidtemplate.viewcontroller.fragment;
+package androidtemplate.securitywizards.herobo.com.androidtemplate.viewcontroller.adapter;
 
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import androidtemplate.securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.SimpleFragment;
+import androidtemplate.securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.SimpleListFragment;
 
 
 /**
@@ -37,25 +40,22 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
         final Fragment result;
         switch (position) {
             case 0:
-//                result = new NewsListFragment();
-//                result = new ProductsFragment();
-//                result = ProductFragment.newInstance();
-                result = ProductFragment.newInstance();
+                result = SimpleFragment.newInstance();
                 break;
             case 1:
-                result = ProductFragment.newInstance();
+                result = SimpleListFragment.newInstance();
                 break;
             case 2:
-                result = ProductFragment.newInstance();
+                result = SimpleFragment.newInstance();
                 break;
             case 3:
-                result = ProductFragment.newInstance();
+                result = SimpleFragment.newInstance();
                 break;
             case 4:
-                result = ProductFragment.newInstance();
+                result = SimpleFragment.newInstance();
                 break;
             case 5:
-                result = ProductFragment.newInstance();
+                result = SimpleFragment.newInstance();
                 break;
             default:
                 result = null;

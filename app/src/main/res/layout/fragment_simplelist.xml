@@ -6,12 +6,10 @@
               android:background="@color/pager_background"
               android:layout_height="match_parent">
 
-    <TextView
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World"
-        android:id="@+id/textView"
-        android:layout_gravity="center_vertical"
+        android:id="@+id/lvListHolder"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
