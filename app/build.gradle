@@ -48,6 +48,7 @@ dependencies {
 //    compile 'com.squareup.picasso:picasso:1.1.1'
     compile 'com.squareup.retrofit:retrofit:1.5.1'
 
+    //an endless adapter, similar to playstore
     compile 'com.commonsware.cwac:endless:1.2.3'
 
     //flatui

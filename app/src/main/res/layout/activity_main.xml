@@ -24,6 +24,6 @@
         android:layout_width="@dimen/navigation_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:name="androidtemplate.securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.NavigationDrawerFragment" />
+        android:name="securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.NavigationDrawerFragment" />
 
 </android.support.v4.widget.DrawerLayout>

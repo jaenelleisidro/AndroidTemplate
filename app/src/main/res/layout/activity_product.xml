@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="3dp">
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hsvInstallRatingHolder"
+                android:layout_toRightOf="@+id/imgIcon"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/tvDetails"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical|right">
+
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="gfdgsdfgsdfg"
+                            android:id="@+id/tvTitle"
+                            android:textColor="#FF000000" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <com.cengalabs.flatui.views.FlatTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf afsdfsd sdfsdf dfsdf ddfsdf "
+                android:id="@+id/tvDetails"
+                android:layout_below="@+id/imgIcon" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imgIcon"
+                android:src="@drawable/ic_launcher" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>
