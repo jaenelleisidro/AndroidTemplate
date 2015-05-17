@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.rey.material.widget.SnackBar;
 import com.squareup.otto.Bus;
 
 import javax.inject.Inject;
 
+import butterknife.InjectView;
 import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.other.helper.AndroidUtils;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.CarouselFragment;
@@ -15,6 +17,8 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.Carous
 
 public class MainActivity extends BaseActivity {
 
+    @InjectView(R.id.main_sn)
+    SnackBar mSnackBar;
     @Inject Bus bus;
     @Inject
     AndroidUtils androidUtils;
@@ -50,6 +54,8 @@ public class MainActivity extends BaseActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+    public SnackBar getSnackBar(){
+        return mSnackBar;
+    }
 
 }

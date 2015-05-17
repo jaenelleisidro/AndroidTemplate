@@ -20,7 +20,6 @@ public class SnackbarFragment extends Fragment{
 		
 	public static SnackbarFragment newInstance(){
 		SnackbarFragment fragment = new SnackbarFragment();
-		
 		return fragment;
 	}
 
@@ -74,8 +73,7 @@ public class SnackbarFragment extends Fragment{
 		bt_mobile_multi.setOnClickListener(listener);
 		bt_tablet_single.setOnClickListener(listener);
 		bt_tablet_multi.setOnClickListener(listener);
-//TODO : snackbar requires something in activity in order to be used
-//		mSnackBar = ((MainActivity)getActivity()).getSnackBar();
+		mSnackBar = ((MainActivity)getActivity()).getSnackBar();
 				
 		return v;
 	}

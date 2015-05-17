@@ -6,29 +6,39 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <!-- this is a working code, we can later use this when we are able to convert everything to material design
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/main_toolbar"
-            android:layout_height="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:minHeight="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:title="@string/app_name"
-            app:theme="@style/AppBar"/>
-        -->
-        <!-- The main content view -->
-        <FrameLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- this is a working code, we can later use this when we are able to convert everything to material design
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:minHeight="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:title="@string/app_name"
+                app:theme="@style/AppBar"/>
+            -->
+            <!-- The main content view -->
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
-        </FrameLayout>
-    </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+        <com.rey.material.widget.SnackBar
+            android:id="@+id/main_sn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:visibility="gone"
+            android:layout_gravity="bottom"/>
+    </FrameLayout>
 
     <!-- The navigation drawer -->
     <!-- android:layout_gravity="start" tells DrawerLayout to treat

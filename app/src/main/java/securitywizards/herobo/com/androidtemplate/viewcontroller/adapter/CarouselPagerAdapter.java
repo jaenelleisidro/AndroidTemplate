@@ -19,6 +19,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.sample
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.DialogsFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.FabFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.SliderFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.SnackbarFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.SpinnersFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.SwitchesFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.TextfieldFragment;
@@ -73,7 +74,7 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
                 result = SliderFragment.newInstance();
                 break;
             case 7:
-                result = SimpleFragment.newInstance(R.layout.fragment_snackbar);
+                result = SnackbarFragment.newInstance();
                 break;
             case 8:
                 result = SpinnersFragment.newInstance();
