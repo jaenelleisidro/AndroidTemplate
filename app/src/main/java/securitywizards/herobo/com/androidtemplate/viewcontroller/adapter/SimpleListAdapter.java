@@ -32,7 +32,7 @@ public class SimpleListAdapter extends ArrayAdapter<String> {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             rowView = inflater.inflate(R.layout.adapter_simplelist_row, parent, false);
             viewHolder=new ViewHolder();
-            viewHolder.textView = (TextView) rowView.findViewById(R.id.label);
+            viewHolder.textView = (TextView) rowView.findViewById(R.id.title);
             viewHolder.imageView = (ImageView) rowView.findViewById(R.id.icon);
             rowView.setTag(viewHolder);
 

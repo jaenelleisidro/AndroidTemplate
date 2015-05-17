@@ -1,6 +1,7 @@
 package securitywizards.herobo.com.androidtemplate.viewcontroller.adapter;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +34,7 @@ public class MovieAdapter extends EndlessAdapter {
   public MovieAdapter(Context ctxt, ArrayList<Movie> list, MovieService movieService) {
     super(new ArrayAdapter<Movie>(ctxt,
                                     R.layout.adapter_simplelist_row,
-                                    R.id.label,
+                                    R.id.title,
                                     list));
     this.movieService=movieService;
     rotate=new RotateAnimation(0f, 360f, Animation.RELATIVE_TO_SELF,
@@ -48,7 +49,7 @@ public class MovieAdapter extends EndlessAdapter {
   protected View getPendingView(ViewGroup parent) {
     View row= LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_simplelist_row, null);
     
-    pendingView=row.findViewById(R.id.label);
+    pendingView=row.findViewById(R.id.title);
     pendingView.setVisibility(View.GONE);
     pendingView=row.findViewById(R.id.icon);
     pendingView.setVisibility(View.VISIBLE);
@@ -62,8 +63,9 @@ public class MovieAdapter extends EndlessAdapter {
         if(convertView==null){
             rowView=super.getView(position,convertView,parent);
             viewHolder=new ViewHolder();
-            viewHolder.textView = (TextView) rowView.findViewById(R.id.label);
+            viewHolder.title = (TextView) rowView.findViewById(R.id.title);
             viewHolder.imageView = (ImageView) rowView.findViewById(R.id.icon);
+            viewHolder.description = (TextView) rowView.findViewById(R.id.description);
             rowView.setTag(viewHolder);
         }else{
             rowView=convertView;
@@ -72,9 +74,14 @@ public class MovieAdapter extends EndlessAdapter {
 
         if(position<getWrappedAdapter().getCount()) {
             Movie movie = (Movie) getWrappedAdapter().getItem(position);
-            viewHolder.textView.setVisibility(View.VISIBLE);
+            viewHolder.title.setVisibility(View.VISIBLE);
             viewHolder.imageView.setVisibility(View.VISIBLE);
-            viewHolder.textView.setText(position+":"+movie.name);
+            viewHolder.title.setText(position + ":" + movie.name);
+            String description="channel : "+ movie.channel+"   "
+                    +"End Time : " + movie.end_time+"   "
+                    +"Start Time : " + movie.start_time+"   "
+                    +"Rating : " + movie.rating;
+            viewHolder.description.setText(description);
         }
         return rowView;
     }
@@ -118,7 +125,8 @@ public class MovieAdapter extends EndlessAdapter {
   }
 
     private class ViewHolder{
-        TextView textView;
+        TextView title;
+        TextView description;
         ImageView imageView;
     }
 

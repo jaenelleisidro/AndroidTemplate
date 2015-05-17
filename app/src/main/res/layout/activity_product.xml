@@ -52,7 +52,7 @@
             </RelativeLayout>
 
 
-            <com.cengalabs.flatui.views.FlatTextView
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
