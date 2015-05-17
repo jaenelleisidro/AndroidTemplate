@@ -27,6 +27,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.Carous
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ButtonFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.NavigationDrawerFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ParallaxFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ProgressFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleListFragment;
@@ -53,10 +54,8 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.service.Downloa
                 , ProgressFragment.class
                 , DownloadService.class
                 , MainActivity.class
+                , ParallaxFragment.class
                 ,MovieActivity.class
-
-
-
         }
 )
 public class MainModule {
@@ -91,18 +90,18 @@ public class MainModule {
         return new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
     }
 
-    @Provides
-    RestErrorHandler provideRestErrorHandler(Bus bus) {
-        return new RestErrorHandler(bus);
-    }
 
     @Provides
     RestAdapterRequestInterceptor provideRestAdapterRequestInterceptor(UserAgentProvider userAgentProvider,AndroidUtils androidUtils) {
         return new RestAdapterRequestInterceptor(userAgentProvider,androidUtils);
     }
+    @Provides
+    RestErrorHandler provideRestErrorHandler(Bus bus,RestAdapterRequestInterceptor restAdapterRequestInterceptor) {
+        return new RestErrorHandler(bus,restAdapterRequestInterceptor);
+    }
 
     @Provides
-    RestAdapter provideRestAdapter(Context context,RestErrorHandler restErrorHandler, RestAdapterRequestInterceptor restRequestInterceptor, Gson gson) {
+    OkHttpClient provideRestAdapterRequestInterceptor(Context context) {
         OkHttpClient okHttpClient = new OkHttpClient();
         int cacheSize = 50 * 1024 * 1024; // 10 MiB
         File cacheDirectory = new File(context.getCacheDir().getAbsolutePath(), "HttpCache");
@@ -112,7 +111,13 @@ public class MainModule {
         } catch (IOException e) {
             //cache is not really important, skip if something went wrong
         }
+        return okHttpClient;
+    }
 
+
+
+    @Provides
+    RestAdapter provideRestAdapter(Context context,RestErrorHandler restErrorHandler, RestAdapterRequestInterceptor restRequestInterceptor, Gson gson,OkHttpClient okHttpClient) {
         return new RestAdapter.Builder()
                 .setClient(new OkClient(okHttpClient))
                 .setEndpoint(MovieHttpService.URL_MOVIEWEBSITE)

@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import securitywizards.herobo.com.androidtemplate.R;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ParallaxFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.ButtonFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.ProgressFragment;
@@ -42,7 +43,7 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 11;
+        return 12;
     }
 
     @Override
@@ -81,6 +82,9 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
                 break;
             case 10:
                 result = TextfieldFragment.newInstance();
+                break;
+            case 11:
+                result = ParallaxFragment.newInstance();
                 break;
             default:
                 result = null;
