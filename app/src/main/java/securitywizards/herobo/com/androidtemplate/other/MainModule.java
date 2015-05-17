@@ -110,8 +110,8 @@ public class MainModule {
         return new RestAdapter.Builder()
                 .setClient(new OkClient(okHttpClient))
                 .setEndpoint(MovieHttpService.URL_MOVIEWEBSITE)
-//                .setErrorHandler(restErrorHandler)
-//                .setRequestInterceptor(restRequestInterceptor)
+                .setErrorHandler(restErrorHandler)
+                .setRequestInterceptor(restRequestInterceptor)
                 .setLogLevel(RestAdapter.LogLevel.FULL)
                 .setConverter(new GsonConverter(gson))
                 .build();

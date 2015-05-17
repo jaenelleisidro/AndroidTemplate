@@ -13,6 +13,9 @@ import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
  */
 public class SimpleFragment extends BaseFragment {
 
+    public static final String ARG_LAYOUTID = "layoutid";
+    public int layoutId;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,12 +23,16 @@ public class SimpleFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_simple, container, false);
+        return inflater.inflate(layoutId, container, false);
     }
 
-
     public static Fragment newInstance(){
+        return newInstance(R.layout.fragment_button);
+    }
+
+    public static Fragment newInstance(int layoutId){
         SimpleFragment simpleFragment =new SimpleFragment();
+        simpleFragment.layoutId=layoutId;
         return simpleFragment;
     }
 }
