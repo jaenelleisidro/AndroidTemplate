@@ -8,6 +8,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ParallaxFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SwipeFragment;
@@ -38,87 +41,160 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
      * @param resources
      * @param fragmentManager
      */
+    List<FragmentGenerate> list=new ArrayList<FragmentGenerate>();
     public CarouselPagerAdapter(final Resources resources, final FragmentManager fragmentManager) {
         super(fragmentManager);
         this.resources = resources;
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return SimpleListFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Simple List";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return MoviesFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Movies";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return ButtonFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Buttons";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return DialogsFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Dialogs";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return FabFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "FAB";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return ProgressFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Progress";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return SliderFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Slider";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return SnackbarFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Snackbar";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return SpinnersFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Spinner";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return SwitchesFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Switches";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return TextfieldFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Textfield";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return ParallaxFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Parallax";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return SwipeFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Swipe";
+            }
+        });
+    }
+
+
+    private interface FragmentGenerate{
+        abstract public Fragment newInstance();
+        abstract public String instanceName();
     }
 
     @Override
     public int getCount() {
-        return 13;
+        return list.size();
     }
 
     @Override
     public Fragment getItem(final int position) {
-        final Fragment result;
-        switch (position) {
-            case 0:
-                result = SimpleListFragment.newInstance();
-                break;
-            case 1:
-                result = MoviesFragment.newInstance();
-                break;
-            case 2:
-                result = ButtonFragment.newInstance();
-                break;
-            case 3:
-                result = DialogsFragment.newInstance();
-                break;
-            case 4:
-                result = FabFragment.newInstance();
-                break;
-            case 5:
-                result = ProgressFragment.newInstance();
-                break;
-            case 6:
-                result = SliderFragment.newInstance();
-                break;
-            case 7:
-                result = SnackbarFragment.newInstance();
-                break;
-            case 8:
-                result = SpinnersFragment.newInstance();
-                break;
-            case 9:
-                result = SwitchesFragment.newInstance();
-                break;
-            case 10:
-                result = TextfieldFragment.newInstance();
-                break;
-            case 11:
-                result = ParallaxFragment.newInstance();
-                break;
-            case 12:
-                result = SwipeFragment.newInstance();
-                break;
-            default:
-                result = null;
-                break;
-        }
-        if (result != null) {
-            result.setArguments(new Bundle()); //TODO do we need this?
-        }
-        return result;
+        return list.get(position).newInstance();
     }
 
     @Override
     public CharSequence getPageTitle(final int position) {
-        return "page title "+position;
-//        switch (position) {
-//            case 0:
-//                return resources.getString(R.string.page_home);
-//            case 1:
-//                return resources.getString(R.string.page_free);
-//            case 2:
-//                return resources.getString(R.string.page_paid);
-//            case 3:
-//                return resources.getString(R.string.page_hot);
-//            case 4:
-//                return resources.getString(R.string.page_staffpic);
-//            case 5:
-//                return resources.getString(R.string.page_recommended);
-//            default:
-//                return null;
-//        }
+        return list.get(position).instanceName();
     }
 }
