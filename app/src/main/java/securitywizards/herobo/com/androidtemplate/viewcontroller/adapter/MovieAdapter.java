@@ -91,13 +91,13 @@ public class MovieAdapter extends EndlessAdapter {
   @Override
   protected boolean cacheInBackground() {
     //to test for slow netwrok try this -> SystemClock.sleep(10000);
-    try {
+//    try {
         movies = movieService.getMovie(getWrappedAdapter().getCount());
         return (getWrappedAdapter().getCount() < movies.count);
-    }catch(RuntimeException e2){
-    }catch(Exception e){
-    }
-      return true;
+//    }catch(RuntimeException e2){
+//    }catch(Exception e){
+//    }
+//      return false;
   }
   
   @Override

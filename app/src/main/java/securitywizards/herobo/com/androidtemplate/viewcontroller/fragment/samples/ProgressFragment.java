@@ -76,22 +76,7 @@ public class ProgressFragment extends BaseFragment {
 //        progressPvLinearQuery.setProgress(.5f);
         progressPvLinearBuffer.start();
 //        progressPvLinearBuffer.setProgress(.5f);
-        fakeProgress.execute();
     }
-
-    AsyncTask<Void,Void,Float> fakeProgress=new AsyncTask<Void, Void, Float>(){
-        @Override
-        protected Float doInBackground(Void... params) {
-            return null;
-        }
-
-        @Override
-        protected void onProgressUpdate(Void... values) {
-
-        }
-    };
-
-
 
     public static Fragment newInstance(){
         ProgressFragment progressFragment =new ProgressFragment();

@@ -14,17 +14,18 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.BaseFr
  */
 public class SimpleFragment extends BaseFragment {
 
-    public static final String ARG_LAYOUTID = "layoutid";
     public int layoutId;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(layoutId, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
     }
 
     public static Fragment newInstance(){
