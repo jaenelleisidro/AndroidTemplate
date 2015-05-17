@@ -18,7 +18,7 @@ import butterknife.InjectView;
 public class CarouselFragment extends BaseFragment {
 
     @InjectView(R.id.tpi_header)
-    protected TitlePageIndicator indicator;
+    protected com.rey.material.widget.TabPageIndicator indicator;
 
     @InjectView(R.id.vp_pages)
     protected ViewPager pager;

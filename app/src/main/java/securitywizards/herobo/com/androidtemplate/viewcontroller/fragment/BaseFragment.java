@@ -10,6 +10,12 @@ import butterknife.Views;
  * Created by jaenelleisidro on 5/16/15.
  */
 public class BaseFragment extends Fragment {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+//         this throws an error when nested fragment
+//        setRetainInstance(true); //Will ignore onDestroy Method (Nested Fragments no need this if parent have it)
+    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -18,6 +24,8 @@ public class BaseFragment extends Fragment {
         Views.inject(this, getView());
         //inject via dagger
         Injector.inject(this);
-
     }
+
+
+
 }
