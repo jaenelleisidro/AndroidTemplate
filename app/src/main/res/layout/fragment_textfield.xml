@@ -11,8 +11,8 @@
 	    android:layout_height="wrap_content"
 	    android:orientation="vertical"
 	    android:padding="8dp">
-<!--
-        <com.rey.material.app.ContactEditText
+
+        <securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.app.ContactEditText
             style="@style/ContactEditText"
             android:id="@+id/textfield_tv"
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             app:et_dividerPadding="4dp"
             app:cet_spanFontFamily="asset:FreeSans.ttf"
             android:completionThreshold="2"/>
--->
+
         <com.rey.material.widget.EditText
             style="@style/Material.Widget.EditText.Light"
             android:id="@+id/textfield_et_label"

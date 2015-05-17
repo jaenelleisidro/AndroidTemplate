@@ -9,11 +9,17 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import securitywizards.herobo.com.androidtemplate.R;
-import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ButtonFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.ButtonFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
-import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ProgressFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.ProgressFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleListFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.DialogsFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.FabFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.SliderFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.SpinnersFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.SwitchesFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.TextfieldFragment;
 
 
 /**
@@ -53,28 +59,28 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
                 result = ButtonFragment.newInstance();
                 break;
             case 3:
-                result = SimpleFragment.newInstance(R.layout.fragment_dialog);
+                result = DialogsFragment.newInstance();
                 break;
             case 4:
-                result = SimpleFragment.newInstance(R.layout.fragment_fab);
+                result = FabFragment.newInstance();
                 break;
             case 5:
                 result = ProgressFragment.newInstance();
                 break;
             case 6:
-                result = SimpleFragment.newInstance(R.layout.fragment_slider);
+                result = SliderFragment.newInstance();
                 break;
             case 7:
                 result = SimpleFragment.newInstance(R.layout.fragment_snackbar);
                 break;
             case 8:
-                result = SimpleFragment.newInstance(R.layout.fragment_spinner);
+                result = SpinnersFragment.newInstance();
                 break;
             case 9:
-                result = SimpleFragment.newInstance(R.layout.fragment_switches);
+                result = SwitchesFragment.newInstance();
                 break;
             case 10:
-                result = SimpleFragment.newInstance(R.layout.fragment_textfield);
+                result = TextfieldFragment.newInstance();
                 break;
             default:
                 result = null;

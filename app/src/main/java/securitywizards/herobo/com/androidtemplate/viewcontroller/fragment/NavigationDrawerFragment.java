@@ -103,6 +103,7 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
+        //TODO : we need to change getactionbar later when we switch to material design
         drawerListView.setAdapter(new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
                 android.R.layout.simple_list_item_1,

@@ -47,8 +47,6 @@ public class MovieActivity extends BaseActivity {
         eventBus.register(this);
 
         setContentView(R.layout.activity_product);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         movie = (Movie) getIntent().getSerializableExtra(KEY_MOVIE);
         tvTitle.setText(movie.name);
