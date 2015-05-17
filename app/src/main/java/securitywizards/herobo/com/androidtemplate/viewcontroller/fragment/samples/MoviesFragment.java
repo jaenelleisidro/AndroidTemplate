@@ -7,16 +7,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-
 import javax.inject.Inject;
 
 import securitywizards.herobo.com.androidtemplate.R;
 import butterknife.InjectView;
-import butterknife.Views;
 import securitywizards.herobo.com.androidtemplate.domain.Movie;
 import securitywizards.herobo.com.androidtemplate.model.businesslayer.MovieService;
-import securitywizards.herobo.com.androidtemplate.other.Injector;
+import securitywizards.herobo.com.androidtemplate.other.dagger.Injector;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.activity.MovieActivity;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.adapter.MovieAdapter;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.BaseFragment;

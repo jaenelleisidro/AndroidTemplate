@@ -24,7 +24,7 @@ import com.squareup.otto.Bus;
 import javax.inject.Inject;
 
 import securitywizards.herobo.com.androidtemplate.R;
-import securitywizards.herobo.com.androidtemplate.other.Injector;
+import securitywizards.herobo.com.androidtemplate.other.dagger.Injector;
 import securitywizards.herobo.com.androidtemplate.other.helper.UIUtils;
 
 /**

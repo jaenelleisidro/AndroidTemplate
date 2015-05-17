@@ -1,4 +1,4 @@
-package securitywizards.herobo.com.androidtemplate.other;
+package securitywizards.herobo.com.androidtemplate.other.dagger;
 
 import android.accounts.AccountManager;
 import android.app.NotificationManager;
@@ -15,6 +15,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import securitywizards.herobo.com.androidtemplate.other.MainApplication;
 
 /**
  * Module for all Android related provisions

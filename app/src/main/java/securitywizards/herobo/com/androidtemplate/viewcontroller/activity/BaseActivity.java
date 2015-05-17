@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 
-import securitywizards.herobo.com.androidtemplate.other.Injector;
+import securitywizards.herobo.com.androidtemplate.other.dagger.Injector;
 import butterknife.Views;
 
 import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;

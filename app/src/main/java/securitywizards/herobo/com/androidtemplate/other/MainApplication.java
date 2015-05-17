@@ -6,6 +6,9 @@ import android.app.Application;
 import android.app.Instrumentation;
 import android.content.Context;
 
+import securitywizards.herobo.com.androidtemplate.other.dagger.Injector;
+import securitywizards.herobo.com.androidtemplate.other.dagger.RootModule;
+
 /**
  * playstore application
  */

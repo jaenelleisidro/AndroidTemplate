@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import securitywizards.herobo.com.androidtemplate.other.Injector;
+import securitywizards.herobo.com.androidtemplate.other.dagger.Injector;
 import butterknife.Views;
 
 /**

@@ -1,4 +1,4 @@
-package securitywizards.herobo.com.androidtemplate.other;
+package securitywizards.herobo.com.androidtemplate.other.dagger;
 
 import android.content.Context;
 
@@ -18,6 +18,10 @@ import retrofit.client.OkClient;
 import retrofit.converter.GsonConverter;
 import securitywizards.herobo.com.androidtemplate.model.businesslayer.MovieService;
 import securitywizards.herobo.com.androidtemplate.model.dataaccesslayer.MovieHttpService;
+import securitywizards.herobo.com.androidtemplate.other.MainApplication;
+import securitywizards.herobo.com.androidtemplate.other.retrofit.RestAdapterRequestInterceptor;
+import securitywizards.herobo.com.androidtemplate.other.retrofit.RestErrorHandler;
+import securitywizards.herobo.com.androidtemplate.other.retrofit.UserAgentProvider;
 import securitywizards.herobo.com.androidtemplate.other.helper.AndroidUtils;
 import securitywizards.herobo.com.androidtemplate.other.helper.PostFromAnyThreadBus;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.activity.MainActivity;
@@ -25,6 +29,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.activity.MovieA
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.BaseFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.CarouselFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ButtonFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DaimajaSliderFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.NavigationDrawerFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ParallaxFragment;
@@ -57,6 +62,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.service.Downloa
                 , MainActivity.class
                 , ParallaxFragment.class
                 , SwipeFragment.class
+                , DaimajaSliderFragment.class
                 ,MovieActivity.class
         }
 )

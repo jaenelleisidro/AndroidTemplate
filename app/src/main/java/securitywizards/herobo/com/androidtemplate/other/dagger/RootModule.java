@@ -1,4 +1,4 @@
-package securitywizards.herobo.com.androidtemplate.other;
+package securitywizards.herobo.com.androidtemplate.other.dagger;
 
 import dagger.Module;
 

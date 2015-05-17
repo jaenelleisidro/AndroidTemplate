@@ -14,17 +14,15 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 
-import com.loopj.android.http.AsyncHttpClient;
 import com.squareup.otto.Bus;
 
 import javax.inject.Inject;
 
 import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.domain.DownloadItem;
-import securitywizards.herobo.com.androidtemplate.other.Injector;
+import securitywizards.herobo.com.androidtemplate.other.dagger.Injector;
 import securitywizards.herobo.com.androidtemplate.other.helper.AndroidUtils;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.activity.MainActivity;
 

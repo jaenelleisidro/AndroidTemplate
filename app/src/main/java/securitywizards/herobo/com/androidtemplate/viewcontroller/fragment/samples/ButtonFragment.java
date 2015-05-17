@@ -1,7 +1,6 @@
 package securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +9,6 @@ import javax.inject.Inject;
 
 import securitywizards.herobo.com.androidtemplate.R;
 import butterknife.InjectView;
-import butterknife.Views;
-import securitywizards.herobo.com.androidtemplate.other.Injector;
 import securitywizards.herobo.com.androidtemplate.other.helper.AndroidUtils;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.BaseFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.service.DownloadService;

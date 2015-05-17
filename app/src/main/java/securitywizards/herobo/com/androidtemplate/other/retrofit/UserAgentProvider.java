@@ -1,4 +1,4 @@
-package securitywizards.herobo.com.androidtemplate.other;
+package securitywizards.herobo.com.androidtemplate.other.retrofit;
 
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
