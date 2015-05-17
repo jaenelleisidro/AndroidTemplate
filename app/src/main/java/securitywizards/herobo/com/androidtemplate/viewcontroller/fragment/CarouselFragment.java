@@ -24,17 +24,31 @@ public class CarouselFragment extends BaseFragment {
     protected ViewPager pager;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView2(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_carousel, container, false);
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
+    public void onActivityCreated2(Bundle savedInstanceState) {
         pager.setAdapter(new CarouselPagerAdapter(getResources(), getChildFragmentManager()));
         indicator.setViewPager(pager);
-        pager.setCurrentItem(0);
+        pager.setCurrentItem(currentItem);
 
     }
+
+    int currentItem=0;
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){
+        currentItem=savedInstanceState.getInt("currentItem");
+    }
+    @Override
+    public void onSaveInstanceState2(Bundle outState) {
+        currentItem=pager.getCurrentItem();
+        outState.putInt("currentItem", pager.getCurrentItem());
+    }
+
+    public static CarouselFragment newInstance(){
+        return new CarouselFragment();
+    }
+
 }

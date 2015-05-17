@@ -46,13 +46,12 @@ public class ProgressFragment extends BaseFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView2(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_progress, container, false);
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onActivityCreated2(Bundle savedInstanceState) {
         progressPvCircular.start();
         progressPvCircularColors.start();
 
@@ -77,6 +76,12 @@ public class ProgressFragment extends BaseFragment {
         progressPvLinearBuffer.start();
 //        progressPvLinearBuffer.setProgress(.5f);
     }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){}
+    @Override
+    public void onSaveInstanceState2(Bundle outState) {}
+
 
     public static Fragment newInstance(){
         ProgressFragment progressFragment =new ProgressFragment();

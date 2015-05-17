@@ -91,18 +91,18 @@ public class MovieAdapter extends EndlessAdapter {
   @Override
   protected boolean cacheInBackground() {
     //to test for slow netwrok try this -> SystemClock.sleep(10000);
-//    try {
+    try {
         movies = movieService.getMovie(getWrappedAdapter().getCount());
         return (getWrappedAdapter().getCount() < movies.count);
-//    }catch(RuntimeException e2){
-//    }catch(Exception e){
-//    }
-//      return false;
+    }catch(RuntimeException e2){
+    }catch(Exception e){
+    }
+      return true;
   }
   
   @Override
   protected void appendCachedData() {
-    if (getWrappedAdapter().getCount()< movies.count) {
+    if (movies!=null && getWrappedAdapter().getCount()< movies.count) {
       ArrayAdapter<Movie> a=(ArrayAdapter<Movie>)getWrappedAdapter();
       //if you need to find the index.. a.getCount()-1
       for(Movie movie:movies.results){

@@ -24,7 +24,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        androidUtils.loadFragment(this,R.id.container,new CarouselFragment());
+        androidUtils.loadFragment(this,R.id.container,CarouselFragment.newInstance());
 
     }
 

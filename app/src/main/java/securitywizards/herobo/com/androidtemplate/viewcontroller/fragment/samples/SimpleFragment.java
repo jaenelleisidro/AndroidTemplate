@@ -17,27 +17,22 @@ public class SimpleFragment extends BaseFragment {
     public int layoutId;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        onRestoreInstanceState(savedInstanceState);
+    public View onCreateView2(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(layoutId, container, false);
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onActivityCreated2(Bundle savedInstanceState) {
     }
 
-    //Here you can restore saved data in onSaveInstanceState Bundle
-    private void onRestoreInstanceState(Bundle savedInstanceState){
-        if(savedInstanceState!=null){
-            layoutId=savedInstanceState.getInt("layoutId");
-        }
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){
+        layoutId=savedInstanceState.getInt("layoutId");
     }
 
     //Here you Save your data
     @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
+    public void onSaveInstanceState2(Bundle outState) {
         outState.putInt("layoutId", layoutId);
     }
 

@@ -32,13 +32,12 @@ public class SimpleListFragment extends BaseFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView2(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_simplelist, container, false);
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onActivityCreated2(Bundle savedInstanceState) {
 
 
         String[] values=new String[] { "Android", "iPhone", "WindowsMobile",
@@ -80,6 +79,10 @@ public class SimpleListFragment extends BaseFragment {
 
     }
 
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){}
+    @Override
+    public void onSaveInstanceState2(Bundle outState) {}
 
     public static Fragment newInstance(){
         SimpleListFragment simpleFragment =new SimpleListFragment();

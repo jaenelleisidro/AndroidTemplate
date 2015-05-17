@@ -29,13 +29,12 @@ public class ButtonFragment extends BaseFragment {
     AndroidUtils androidUtils;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView2(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_button, container, false);
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onActivityCreated2(Bundle savedInstanceState) {
         btnBtFlat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,8 +44,14 @@ public class ButtonFragment extends BaseFragment {
         });
     }
 
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){}
+    @Override
+    public void onSaveInstanceState2(Bundle outState) {}
 
-        public static ButtonFragment newInstance(){
+
+
+    public static ButtonFragment newInstance(){
         ButtonFragment buttonFragment =new ButtonFragment();
         return buttonFragment;
     }

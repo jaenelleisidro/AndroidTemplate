@@ -34,13 +34,12 @@ public class MoviesFragment extends BaseFragment {
         Injector.inject(this);
     }
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView2(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_simplelist, container, false);
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onActivityCreated2(Bundle savedInstanceState) {
         MovieAdapter adapter=new MovieAdapter(getActivity(),movieService);
         lvMovies.setAdapter(adapter);
         lvMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -51,6 +50,13 @@ public class MoviesFragment extends BaseFragment {
             }
         });
     }
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){}
+
+    //Here you Save your data
+    @Override
+    public void onSaveInstanceState2(Bundle outState) {}
+
 
     public static MoviesFragment newInstance(){
         return new MoviesFragment();
