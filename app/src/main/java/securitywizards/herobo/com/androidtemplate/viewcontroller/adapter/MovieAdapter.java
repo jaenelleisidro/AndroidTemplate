@@ -14,7 +14,7 @@ import com.commonsware.cwac.endless.EndlessAdapter;
 
 import java.util.ArrayList;
 
-import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.domain.Movie;
 import securitywizards.herobo.com.androidtemplate.domain.Movies;
 import securitywizards.herobo.com.androidtemplate.model.businesslayer.MovieService;
@@ -57,10 +57,6 @@ public class MovieAdapter extends EndlessAdapter {
     return(row);
   }    @Override
        public View getView(int position, View convertView, ViewGroup parent) {
-//        View rowView=super.getView(position,convertView,parent);
-//        ViewHolder viewHolder=new ViewHolder();
-//        viewHolder.textView = (TextView) rowView.findViewById(R.id.label);
-//        viewHolder.imageView = (ImageView) rowView.findViewById(R.id.icon);
         ViewHolder viewHolder=null;
         View rowView=null;
         if(convertView==null){
@@ -87,11 +83,21 @@ public class MovieAdapter extends EndlessAdapter {
 
 
   volatile Movies movies;
+
+    /**
+     * returns true if there's still data that can be fetched
+     * @return
+     */
   @Override
   protected boolean cacheInBackground() {
     //to test for slow netwrok try this -> SystemClock.sleep(10000);
-    movies=movieService.getMovie(getWrappedAdapter().getCount());
-    return(getWrappedAdapter().getCount()<movies.count);
+    try {
+        movies = movieService.getMovie(getWrappedAdapter().getCount());
+        return (getWrappedAdapter().getCount() < movies.count);
+    }catch(RuntimeException e2){
+    }catch(Exception e){
+    }
+      return true;
   }
   
   @Override

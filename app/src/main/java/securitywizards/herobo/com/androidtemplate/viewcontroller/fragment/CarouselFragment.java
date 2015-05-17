@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.viewpagerindicator.TitlePageIndicator;
 
-import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.adapter.CarouselPagerAdapter;
 import butterknife.InjectView;
 

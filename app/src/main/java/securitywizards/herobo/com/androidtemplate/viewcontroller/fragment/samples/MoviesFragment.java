@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import securitywizards.herobo.com.androidtemplate.R;
 import butterknife.InjectView;
 import butterknife.Views;
 import securitywizards.herobo.com.androidtemplate.domain.Movie;
@@ -41,13 +41,6 @@ public class MoviesFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        //MoviesAdapter adapter=new MoviesAdapter(getActivity(),movieService);
-        ArrayList<Integer> list=new ArrayList<Integer>();
-        for(int ctr=1;ctr<10;ctr++){
-            list.add(ctr);
-        }
-
-//        DemoAdapter adapter=new DemoAdapter(getActivity(),list);
         MovieAdapter adapter=new MovieAdapter(getActivity(),movieService);
         lvMovies.setAdapter(adapter);
         lvMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {

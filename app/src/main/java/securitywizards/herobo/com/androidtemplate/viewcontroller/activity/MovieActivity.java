@@ -18,7 +18,7 @@ import com.squareup.otto.Bus;
 
 import javax.inject.Inject;
 
-import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import securitywizards.herobo.com.androidtemplate.R;
 import butterknife.InjectView;
 import securitywizards.herobo.com.androidtemplate.domain.Movie;
 

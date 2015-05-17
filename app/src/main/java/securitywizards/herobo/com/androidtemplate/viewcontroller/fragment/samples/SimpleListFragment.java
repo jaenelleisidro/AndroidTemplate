@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 import javax.inject.Inject;
 
-import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.other.helper.AndroidUtils;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.adapter.SimpleListAdapter;
 import butterknife.InjectView;

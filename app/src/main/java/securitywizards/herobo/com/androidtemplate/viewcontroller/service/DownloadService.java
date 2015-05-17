@@ -22,7 +22,7 @@ import com.squareup.otto.Bus;
 
 import javax.inject.Inject;
 
-import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.domain.DownloadItem;
 import securitywizards.herobo.com.androidtemplate.other.Injector;
 import securitywizards.herobo.com.androidtemplate.other.helper.AndroidUtils;
@@ -122,7 +122,7 @@ public class DownloadService extends IntentService {
         final File targetFile = new File(downloadItem.saveLocation);
         if(targetFile.exists()){
             publishCompleted(downloadItem,targetFile.getAbsolutePath());
-            androidUtils.install(targetFile.getAbsolutePath());
+//            androidUtils.install(targetFile.getAbsolutePath());
             return;
         }
         final File temporaryFile=new File(downloadItem.saveLocation+".temp");

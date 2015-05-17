@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import javax.inject.Inject;
 
-import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import securitywizards.herobo.com.androidtemplate.R;
 import butterknife.InjectView;
 import butterknife.Views;
 import securitywizards.herobo.com.androidtemplate.other.Injector;

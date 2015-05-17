@@ -8,9 +8,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ButtonFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ProgressFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleListFragment;
 
@@ -35,7 +36,7 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 10;
+        return 11;
     }
 
     @Override
@@ -58,18 +59,21 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
                 result = SimpleFragment.newInstance(R.layout.fragment_fab);
                 break;
             case 5:
-                result = SimpleFragment.newInstance(R.layout.fragment_slider);
+                result = ProgressFragment.newInstance();
                 break;
             case 6:
-                result = SimpleFragment.newInstance(R.layout.fragment_snackbar);
+                result = SimpleFragment.newInstance(R.layout.fragment_slider);
                 break;
             case 7:
-                result = SimpleFragment.newInstance(R.layout.fragment_spinner);
+                result = SimpleFragment.newInstance(R.layout.fragment_snackbar);
                 break;
             case 8:
-                result = SimpleFragment.newInstance(R.layout.fragment_switches);
+                result = SimpleFragment.newInstance(R.layout.fragment_spinner);
                 break;
             case 9:
+                result = SimpleFragment.newInstance(R.layout.fragment_switches);
+                break;
+            case 10:
                 result = SimpleFragment.newInstance(R.layout.fragment_textfield);
                 break;
             default:

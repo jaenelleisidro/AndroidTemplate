@@ -27,6 +27,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.Carous
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ButtonFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.NavigationDrawerFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ProgressFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleListFragment;
 import dagger.Module;
@@ -49,6 +50,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.service.Downloa
                 , SimpleListFragment.class
                 , MoviesFragment.class
                 , ButtonFragment.class
+                , ProgressFragment.class
                 , DownloadService.class
                 , MainActivity.class
                 ,MovieActivity.class
