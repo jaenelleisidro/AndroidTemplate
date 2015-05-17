@@ -24,12 +24,14 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.activity.MainAc
 import securitywizards.herobo.com.androidtemplate.viewcontroller.activity.MovieActivity;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.BaseFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.CarouselFragment;
-import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.MoviesFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ButtonFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.NavigationDrawerFragment;
-import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.SimpleFragment;
-import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.SimpleListFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleListFragment;
 import dagger.Module;
 import dagger.Provides;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.service.DownloadService;
 
 /**
  * Dagger module for setting up provides statements.
@@ -46,6 +48,8 @@ import dagger.Provides;
                 , SimpleFragment.class
                 , SimpleListFragment.class
                 , MoviesFragment.class
+                , ButtonFragment.class
+                , DownloadService.class
                 , MainActivity.class
                 ,MovieActivity.class
 

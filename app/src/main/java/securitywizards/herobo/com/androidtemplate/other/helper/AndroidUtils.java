@@ -121,10 +121,6 @@ public class AndroidUtils {
         context.startActivity(intent);
     }
 
-    public String getDownloadLocation(String fileName){
-        return Environment.DIRECTORY_DOWNLOADS+ File.pathSeparator+fileName;
-    }
-
 
     public boolean isBackgorundServiceRunning(Class<?> serviceClass) {
         ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
@@ -181,6 +177,10 @@ public class AndroidUtils {
             }
         }
         return false;
+    }
+
+    public File getDefaultDownloadLocation(String fileName){
+        return new File(getDefaultDownloadLocation(),fileName);
     }
 
     public File getDefaultDownloadLocation() {

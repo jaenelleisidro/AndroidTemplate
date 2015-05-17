@@ -1,6 +1,5 @@
-package securitywizards.herobo.com.androidtemplate.viewcontroller.fragment;
+package securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,6 +14,7 @@ import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.other.helper.AndroidUtils;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.adapter.SimpleListAdapter;
 import butterknife.InjectView;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.BaseFragment;
 
 /**
  * Fragment which houses the View pager.

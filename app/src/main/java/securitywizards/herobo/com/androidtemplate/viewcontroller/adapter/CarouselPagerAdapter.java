@@ -9,9 +9,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
-import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.MoviesFragment;
-import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.SimpleFragment;
-import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.SimpleListFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ButtonFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleListFragment;
 
 
 /**
@@ -48,7 +49,7 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
                 result = MoviesFragment.newInstance();
                 break;
             case 2:
-                result = SimpleFragment .newInstance(R.layout.fragment_button);
+                result = ButtonFragment.newInstance();
                 break;
             case 3:
                 result = SimpleFragment.newInstance(R.layout.fragment_dialog);

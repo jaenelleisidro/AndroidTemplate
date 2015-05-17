@@ -1,4 +1,4 @@
-package securitywizards.herobo.com.androidtemplate.viewcontroller.fragment;
+package securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,6 +19,7 @@ import securitywizards.herobo.com.androidtemplate.model.businesslayer.MovieServi
 import securitywizards.herobo.com.androidtemplate.other.Injector;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.activity.MovieActivity;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.adapter.MovieAdapter;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.BaseFragment;
 
 public class MoviesFragment extends BaseFragment {
 
@@ -40,8 +41,6 @@ public class MoviesFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        Views.inject(this, getView());
         //MoviesAdapter adapter=new MoviesAdapter(getActivity(),movieService);
         ArrayList<Integer> list=new ArrayList<Integer>();
         for(int ctr=1;ctr<10;ctr++){

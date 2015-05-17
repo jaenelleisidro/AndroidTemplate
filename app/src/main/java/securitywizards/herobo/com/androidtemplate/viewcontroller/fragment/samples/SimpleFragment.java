@@ -1,4 +1,4 @@
-package securitywizards.herobo.com.androidtemplate.viewcontroller.fragment;
+package securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidtemplate.securitywizards.herobo.com.androidtemplate.R;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.BaseFragment;
 
 /**
  * Fragment which houses the View pager.

@@ -35,6 +35,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="securitywizards.herobo.com.androidtemplate.viewcontroller.activity.MainActivity" />
         </activity>
+        <service android:name="securitywizards.herobo.com.androidtemplate.viewcontroller.service.DownloadService" android:enabled="true" android:exported="false" />
 
     </application>
 
