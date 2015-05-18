@@ -1,6 +1,7 @@
 package securitywizards.herobo.com.androidtemplate.other.dagger;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -16,8 +17,11 @@ import javax.inject.Singleton;
 import retrofit.RestAdapter;
 import retrofit.client.OkClient;
 import retrofit.converter.GsonConverter;
+import securitywizards.herobo.com.androidtemplate.model.businesslayer.BoxRepository;
 import securitywizards.herobo.com.androidtemplate.model.businesslayer.MovieService;
 import securitywizards.herobo.com.androidtemplate.model.dataaccesslayer.MovieHttpService;
+import securitywizards.herobo.com.androidtemplate.model.dataaccesslayer.greendao.DaoMaster;
+import securitywizards.herobo.com.androidtemplate.model.dataaccesslayer.greendao.DaoSession;
 import securitywizards.herobo.com.androidtemplate.other.MainApplication;
 import securitywizards.herobo.com.androidtemplate.other.retrofit.RestAdapterRequestInterceptor;
 import securitywizards.herobo.com.androidtemplate.other.retrofit.RestErrorHandler;
@@ -30,6 +34,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.BaseFr
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.CarouselFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ButtonFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DaimajaSliderFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DatabaseListFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.NavigationDrawerFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ParallaxFragment;
@@ -63,6 +68,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.service.Downloa
                 , ParallaxFragment.class
                 , SwipeFragment.class
                 , DaimajaSliderFragment.class
+                , DatabaseListFragment.class
                 ,MovieActivity.class
         }
 )
@@ -147,4 +153,20 @@ public class MainModule {
     MovieService provideMovieService(MovieHttpService movieHttpService,AndroidUtils androidUtils){
         return new MovieService(movieHttpService,androidUtils);
     }
+
+    @Singleton
+    @Provides
+    DaoSession provideDaoSession(Context context){
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(context, "example-db", null);
+        SQLiteDatabase db = helper.getWritableDatabase();
+        DaoMaster daoMaster = new DaoMaster(db);
+        return daoMaster.newSession();
+    }
+    @Singleton
+    @Provides
+    BoxRepository provideBoxRepository(DaoSession daoSession){
+        return new BoxRepository(daoSession);
+    }
+
+
 }

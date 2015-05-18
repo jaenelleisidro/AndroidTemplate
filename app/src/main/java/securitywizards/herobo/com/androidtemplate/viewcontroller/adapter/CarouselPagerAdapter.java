@@ -13,6 +13,7 @@ import java.util.List;
 
 import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DaimajaSliderFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DatabaseListFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ParallaxFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SwipeFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.ButtonFragment;
@@ -184,6 +185,16 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
             @Override
             public String instanceName() {
                 return "Daimaja Slider";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return DatabaseListFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Database List";
             }
         });
     }
