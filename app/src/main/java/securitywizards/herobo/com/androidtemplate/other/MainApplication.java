@@ -9,9 +9,6 @@ import android.content.Context;
 import securitywizards.herobo.com.androidtemplate.other.dagger.Injector;
 import securitywizards.herobo.com.androidtemplate.other.dagger.RootModule;
 
-/**
- * playstore application
- */
 public class MainApplication extends Application {
 
     private static MainApplication instance;
