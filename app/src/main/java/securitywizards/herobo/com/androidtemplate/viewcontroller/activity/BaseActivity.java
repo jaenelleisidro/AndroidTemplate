@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 
+import butterknife.ButterKnife;
 import securitywizards.herobo.com.androidtemplate.other.dagger.Injector;
-import butterknife.Views;
 
 import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
@@ -28,7 +28,7 @@ public abstract class BaseActivity extends ActionBarActivity {
         super.setContentView(layoutResId);
 
         // Used to inject views with the Butterknife library
-        Views.inject(this);
+        ButterKnife.inject(this);
     }
 
     @Override

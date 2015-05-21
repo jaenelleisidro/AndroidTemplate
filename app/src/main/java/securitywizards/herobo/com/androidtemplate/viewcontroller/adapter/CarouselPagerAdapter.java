@@ -15,6 +15,7 @@ import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DaimajaSliderFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DatabaseListFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ParallaxFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SweetDialogFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SwipeFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.ButtonFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
@@ -195,6 +196,16 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
             @Override
             public String instanceName() {
                 return "Database List";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return SweetDialogFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "Sweet Dialog";
             }
         });
     }

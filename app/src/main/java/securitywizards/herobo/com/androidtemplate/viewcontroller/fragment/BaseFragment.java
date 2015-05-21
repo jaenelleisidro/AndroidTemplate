@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.ButterKnife;
 import securitywizards.herobo.com.androidtemplate.other.dagger.Injector;
-import butterknife.Views;
 
 /**
  * Created by jaenelleisidro on 5/16/15.
@@ -28,7 +28,7 @@ public abstract class BaseFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         //inject via butterknife
-        Views.inject(this, getView());
+        ButterKnife.inject(this, getView());
         //inject via dagger
         Injector.inject(this);
         onActivityCreated2(savedInstanceState);
