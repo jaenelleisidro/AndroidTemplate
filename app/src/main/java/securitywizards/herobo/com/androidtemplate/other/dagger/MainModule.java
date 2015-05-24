@@ -2,6 +2,7 @@ package securitywizards.herobo.com.androidtemplate.other.dagger;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.ListView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,6 +36,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.Carous
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ButtonFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DaimajaSliderFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DatabaseListFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ListViewParallaxFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.MoviesFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.NavigationDrawerFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ParallaxFragment;
@@ -72,6 +74,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.service.Downloa
                 , DatabaseListFragment.class
                 ,MovieActivity.class
                 , SweetDialogFragment.class
+                , ListViewParallaxFragment.class
         }
 )
 public class MainModule {

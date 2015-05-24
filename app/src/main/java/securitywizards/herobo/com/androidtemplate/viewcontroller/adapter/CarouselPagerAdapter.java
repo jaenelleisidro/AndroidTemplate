@@ -14,6 +14,7 @@ import java.util.List;
 import securitywizards.herobo.com.androidtemplate.R;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DaimajaSliderFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DatabaseListFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ListViewParallaxFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ParallaxFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SweetDialogFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SwipeFragment;
@@ -168,6 +169,18 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
                 return "Parallax";
             }
         });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return ListViewParallaxFragment.newInstance();
+            }
+            @Override
+            public String instanceName() {
+                return "ListView Parallax";
+            }
+        });
+
+
         list.add(new FragmentGenerate() {
             @Override
             public Fragment newInstance() {
