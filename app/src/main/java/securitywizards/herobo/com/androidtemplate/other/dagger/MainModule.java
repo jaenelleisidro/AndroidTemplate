@@ -45,6 +45,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.sample
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleListFragment;
 import dagger.Module;
 import dagger.Provides;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleWebViewFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SweetDialogFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SwipeFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.service.DownloadService;
@@ -75,6 +76,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.service.Downloa
                 ,MovieActivity.class
                 , SweetDialogFragment.class
                 , ListViewParallaxFragment.class
+                , SimpleWebViewFragment.class
         }
 )
 public class MainModule {

@@ -16,6 +16,7 @@ import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.sample
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.DatabaseListFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ListViewParallaxFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.ParallaxFragment;
+import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SimpleWebViewFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SweetDialogFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.SwipeFragment;
 import securitywizards.herobo.com.androidtemplate.viewcontroller.fragment.samples.material.ButtonFragment;
@@ -219,6 +220,16 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter {
             @Override
             public String instanceName() {
                 return "Sweet Dialog";
+            }
+        });
+        list.add(new FragmentGenerate() {
+            @Override
+            public Fragment newInstance() {
+                return SimpleWebViewFragment.newInstance("http://tie.com");
+            }
+            @Override
+            public String instanceName() {
+                return "Simple webview";
             }
         });
     }
